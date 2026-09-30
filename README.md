@@ -4,6 +4,8 @@
 
 [Open the interactive demo](https://dual1208.github.io/unspool/)
 
+**Hosting status:** the Pages deployment passes, but this account's existing custom domain redirects the URL to `immersivelanguagelearning.me`, which did not resolve during verification. The app works locally; [deployment notes](docs/DEPLOYMENT.md) describe the external hosting blocker.
+
 Unspool makes context engineering visible. Select the instructions, files, history, and tool schemas that belong in a request, then inspect the entire request before running it. The browser interface sketches a future terminal UI: three panes, plain text, and a small number of deliberate controls.
 
 ![Unspool playground](docs/design/preview.png)
