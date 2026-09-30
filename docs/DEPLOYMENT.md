@@ -1,14 +1,16 @@
-# Deployment status
+# Deployment
 
-The public repository is [dual1208/unspool](https://github.com/dual1208/unspool). Its `main` branch builds, runs the eight context-integrity tests, and deploys to GitHub Pages using `.github/workflows/pages.yml`.
+**Public demo:** https://dual1208.github.io/unspool/
 
-The initial [GitHub Actions run](https://github.com/dual1208/unspool/actions/runs/36687349394) completed successfully. The local production build also passed.
+**Source:** https://github.com/dual1208/unspool
 
-## Existing domain blocker
+The app is hosted on GitHub Pages with HTTPS enforced. The `main` branch builds, runs the context-integrity tests, and publishes `dist/` using `.github/workflows/pages.yml`. The browser demo requires no API key or account.
 
-At verification on September 30, 2026, `https://dual1208.github.io/unspool/` returned HTTP 301 to `http://immersivelanguagelearning.me/unspool/`. The inherited domain did not resolve from the local environment.
+## Domain configuration
 
-The account's existing `dual1208.github.io` Pages site has `cname: immersivelanguagelearning.me`. This project has no separate CNAME. Removing the account site's custom domain would affect its other project-site URLs, so that setting has been left unchanged pending the owner's decision. A successful deployment does not establish a usable hosted URL while this redirect is unresolved.
+On September 30, 2026, the owner authorized removal of the stale `immersivelanguagelearning.me` custom domain from the account's existing `dual1208.github.io` Pages site. GitHub removed its CNAME file and restored the default HTTPS domain. Unspool now uses `https://dual1208.github.io/unspool/` directly.
+
+This account-level change also restores the default `dual1208.github.io` URLs for other project sites that inherited that domain. The Unspool repository has no custom CNAME and requires no separately registered domain.
 
 ## Local preview
 
@@ -17,6 +19,4 @@ npm ci
 npm run dev
 ```
 
-The current local demo is served at `http://127.0.0.1:5173/` while its development server is running. For the production bundle, run `npm run build` and `npm run preview`.
-
-Restoring the existing domain's DNS or explicitly removing that domain from the account-level Pages site would resolve the external routing dependency. Neither requires changing the application.
+For the production bundle, run `npm run build` and `npm run preview`.

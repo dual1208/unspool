@@ -1,12 +1,14 @@
 # Unspool
 
-**See what you send.** A minimal AI harness concept by **Bare Signal**.
+**See what you send.** A minimal AI harness by **Bare Signal**.
 
 [Open the interactive demo](https://dual1208.github.io/unspool/)
 
-**Hosting status:** the Pages deployment passes, but this account's existing custom domain redirects the URL to `immersivelanguagelearning.me`, which did not resolve during verification. The app works locally; [deployment notes](docs/DEPLOYMENT.md) describe the external hosting blocker.
+Unspool is a minimal AI harness for developers who want to control exactly what a model receives. A harness is the software around a model that prepares its input and manages the conversation. Unspool lets you choose and edit instructions, files, conversation history, and tool definitions, then inspect the complete request before a run. Each run preserves its original request so you can review, copy, or export it later.
 
-Unspool makes context engineering visible. Select the instructions, files, history, and tool schemas that belong in a request, then inspect the entire request before running it. The browser interface sketches a future terminal UI: three panes, plain text, and a small number of deliberate controls.
+The design keeps context engineering understandable: three panes, plain text, and a few deliberate controls. Every context change is visible. The current browser demo uses a local simulation to demonstrate this workflow; the planned product brings it to a terminal interface with a real model connection.
+
+[Read the full product description](docs/PRODUCT.md)
 
 ![Unspool playground](docs/design/preview.png)
 
